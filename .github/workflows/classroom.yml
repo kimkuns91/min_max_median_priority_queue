@@ -1,0 +1,23 @@
+# .github/workflows/classroom.yml
+
+name: Autograding
+
+on: [push, pull_request]
+
+jobs:
+  autograde:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Make autograder executable
+      run: chmod +x run_autograde.sh
+
+    - name: Run autograder
+      run: ./run_autograde.sh
+
+    - name: Mark as passed if all tests succeed
+      if: success()
+      run: echo "true"

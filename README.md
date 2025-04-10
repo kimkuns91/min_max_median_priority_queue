@@ -6,13 +6,14 @@
 ```
 gcc pq.c -o pq && ./pq
 ```
-
+---
 자동 채점 실행
 ### 
 ```
 chmod +x run_autograde.sh && ./run_autograde.sh
 ```
 
+### 결과
 ```
 make: Nothing to be done for `all'.
 Test 1: PASS
